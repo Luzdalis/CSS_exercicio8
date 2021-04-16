@@ -22,7 +22,6 @@ body{
 .wrapper1 {
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
     max-width: calc(10000rem / 16);
     margin: auto;
 }
@@ -120,16 +119,12 @@ footer{
     padding-right: 40px;
 }
 
-
-
 #menu div{
     color: white;
     font-size: 20px;
     align-self: center;
     padding: 25px;
 }
-
-
 
 #menu a:hover{
     text-decoration:none;
@@ -159,9 +154,10 @@ h1{
 /* Celular */
 @media screen and (max-width: 767px){ 
     #menu nav span{
-        /* Mostramos o botão do menu para o celular */
+    /* Mostramos o botão do menu para o celular */
         display: inline-block;
     }
+    
     #top {
         height: 25rem;
     }
@@ -169,21 +165,42 @@ h1{
         flex-direction: row;
         flex-wrap: wrap;
     }
+
     #menu{
         border: 1px solid #707070;
     }
-    .inwrapper3_C1 h2, .inwrapper3_C2 h2{
+
+    /* trocos na section marron de 2 colunas */
+    .wrapper3 > .inwrapper3_C1 h2, .wrapper3 > .inwrapper3_C2 h2{
         font-size: 13pt;
     }
-    .inwrapper3_C1 p, .inwrapper3_C2 li{
+    .wrapper3 > .inwrapper3_C1 p, .wrapper3 > .inwrapper3_C2 li{
         font-size: 8pt;
     }
-    
     .inwrapper3_C1, .inwrapper3_C2{
         width: 100%;
     }
 
-    
+    /* trocos na section marron de 3 colunas */
+    .wrapper2 > .inwrapper2_C1 h2, .wrapper2 > .inwrapper2_C2 h2, .wrapper2 > .inwrapper2_C3 h2{
+        font-size: 21pt;
+    }
+    .wrapper2 > .inwrapper2_C1 p, .wrapper2 > .inwrapper2_C2 p, .wrapper2 > .inwrapper2_C3 p{
+        font-size: 13pt;
+    }
+
+    /* trocos na section primeira */
+    .inwrapper1 h2{
+        font-size: 13pt;
+    }
+    .inwrapper1 p{
+        font-size: 10pt;
+    }
+    .inwrapper1{
+        padding: 20px;
+        margin: 80px 0px;
+        width: calc(260rem / 23);
+    }
 }
 
 /* Tablet */
@@ -217,5 +234,4 @@ h1{
     .wrapper1, .wrapper2, .wrapper3 {
         flex-wrap: nowrap;
     }   
-
 }
